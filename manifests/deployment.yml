@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksrdcitestlds-9c9b"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksrdcitestlds-9c9b"
+  template:
+    metadata:
+      labels:
+        app: "aksrdcitestlds-9c9b"
+    spec:
+      containers:
+        - name: "aksrdcitestlds-9c9b"
+          image: "dockeregistry007.azurecr.io/aksrdcitestlds"
+          ports:
+          - containerPort: 8080
